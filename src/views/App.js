@@ -5,6 +5,7 @@ import MainPageTodo from './ToDo/MainPageTodo';
 import Nav from './Nav/Nav';
 import Home from './Example/Home';
 import ListUsers from './Users/ListUsers';
+import DetailUser from './Users/DetailUser';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -26,6 +27,9 @@ function App() {
 
           <img src={logo} className="App-logo" alt="logo" />
 
+          {/*  Giống Switch case, 
+          nó sẽ thực hiện 1 trong mấy cái này có chọn lọc, 
+          nếu ko nó sẽ chạy all Router hoặc chạy 1 trong số đó*/}
           <Switch>
 
             <Route path={"/"} exact>
@@ -44,7 +48,9 @@ function App() {
               <ListUsers />
             </Route>
 
-
+            <Route path={"/detailUser/:id"} exact>
+              <DetailUser />
+            </Route>
 
           </Switch>
 
