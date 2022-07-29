@@ -73,6 +73,10 @@ class MainPageTodo extends React.Component {
 
         return (
             <>
+                <p>
+                    {/* Edit <code>src/App.js</code> and save to reload. */}
+                    ToDo App With ReactJS
+                </p>
                 <div className="divMain-container">
                     <AddTodo
                         pushData={this.pushData}
